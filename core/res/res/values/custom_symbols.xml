@@ -42,4 +42,8 @@
   <java-symbol type="bool" name="config_intrusiveBatteryLed" />
   <java-symbol type="bool" name="config_FastChargingLedSupported" />
   <java-symbol type="integer" name="config_notificationsFastBatteryARGB" />
+
+  <!-- Emergency button in power menu -->
+  <java-symbol type="bool" name="config_showEmergencyButtonInPowerMenu" />
+
 </resources>

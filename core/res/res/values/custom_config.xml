@@ -52,4 +52,8 @@
 
     <!-- Default value for led color when battery is low on charge -->
     <integer name="config_notificationsFastBatteryARGB">0x0000FF</integer>
+
+    <!-- Whether to show emergency button in power menu -->
+    <bool name="config_showEmergencyButtonInPowerMenu">false</bool>
+
 </resources>
