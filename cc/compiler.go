@@ -314,6 +314,10 @@ func (compiler *baseCompiler) compilerFlags(ctx ModuleContext, flags Flags) Flag
 			flags.GlobalFlags = append(flags.GlobalFlags, "-D__BRILLO__")
 		}
 
+                if (Bool(ctx.AConfig().ProductVariables.TargetUsesNoTrebleCamera)) {
+                        flags.CppFlags = append(flags.CppFlags, "-DTARGET_USES_NON_TREBLE_CAMERA")
+                }
+
 		if ctx.Device() {
 			if Bool(compiler.Properties.Rtti) {
 				flags.CppFlags = append(flags.CppFlags, "-frtti")

@@ -168,6 +168,7 @@ type productVariables struct {
 	Uses_media_extensions      *bool `json:",omitempty"`
 	Needs_text_relocations     *bool `json:",omitempty"`
 
+        TargetUsesNoTrebleCamera *bool `json:",omitempty"`
 }
 
 func boolPtr(v bool) *bool {
