@@ -27,6 +27,7 @@ LOCAL_SRC_FILES :=  \
     CameraFlashlight.cpp \
     common/Camera2ClientBase.cpp \
     common/CameraDeviceBase.cpp \
+    common/CameraModule.cpp \
     common/CameraProviderManager.cpp \
     common/FrameProcessorBase.cpp \
     api1/CameraClient.cpp \
@@ -90,6 +91,10 @@ LOCAL_EXPORT_C_INCLUDE_DIRS := \
     frameworks/av/services/camera/libcameraservice
 
 LOCAL_CFLAGS += -Wall -Wextra -Werror
+
+ifeq ($(TARGET_HAS_LEGACY_CAMERA_HAL1),true)
+    LOCAL_CFLAGS += -DNO_CAMERA_SERVER
+endif
 
 LOCAL_MODULE:= libcameraservice
 
